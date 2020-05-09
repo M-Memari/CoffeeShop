@@ -1,19 +1,9 @@
 ﻿namespace CoffeeShop
 {
-    public class Milk : IBeverage
+    public class Milk : Condiment
     {
-        private readonly IBeverage _beverage;
-
-        public Milk(IBeverage beverage)
+        public Milk(IBeverage beverage) : base(beverage, "Milk", 0.30)
         {
-            _beverage = beverage;
-        }
-
-        public string Description => _beverage.Description + ", Milk";
-
-        public double Cost()
-        {
-            return _beverage.Cost() + .10;
         }
     }
 }

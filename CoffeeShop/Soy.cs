@@ -1,19 +1,9 @@
 ﻿namespace CoffeeShop
 {
-    public class Soy : IBeverage
+    public class Soy : Condiment
     {
-        private readonly IBeverage _beverage;
-
-        public Soy(IBeverage beverage)
+        public Soy(IBeverage beverage) : base(beverage, "Soy", 0.20)
         {
-            _beverage = beverage;
-        }
-
-        public string Description => _beverage.Description + ", Soy";
-
-        public double Cost()
-        {
-            return _beverage.Cost() + 0.30;
         }
     }
 }
